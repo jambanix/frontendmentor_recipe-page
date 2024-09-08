@@ -1,47 +1,57 @@
-@import url("assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
-@import url("assets/fonts/young-serif/YoungSerif-Regular.ttf");
+@font-face {
+    font-family: "Outfit";
+    src: url("assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: "Young";
+    src: url("assets/fonts/young-serif/YoungSerif-Regular.ttf");
+}
+
 
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     text-decoration: none;
-    list-style-type: none;
 }
 
 html {
-    font-size: 62.5;
+    font-size: 62.5%;
 }
 
 body {
     background-color: var(--stone-100);
+    width: 100%;
+    padding: 12.8rem 4.8rem;
+    align-items: center;
 }
 
 :root {
 
-    /* Colours */
+    /* ! Colours */
     --rose-800: #7a284e;
-    --rose-50: #FFF7FB;
+    --rose-50: #fae7f0;
     --stone-900: #312e2c;
     --stone-600: #5f564d;
     --stone-150: #e3ddd7;
     --stone-100: #f3e5d7;
     --brown-800: #854632;
 
-    /* Fonts */
+    /* ! Fonts */
     --font-1: "Young";
     --font-2: "Outfit";
 }
 
-/*  Text styles */
+/* ! Text styles */
 .text-1 {
-    font-family: var(--font-1), serif;
+    font-family: var(--font-1);
     font-size: 4rem;
     font-weight: 400;
 }
 
 .text-2 {
-    font-family: var(--font-2), serif;
+    font-family: var(--font-1);
     font-size: 2.8rem;
     font-weight: 400;
 }
@@ -55,14 +65,116 @@ body {
 .text-4 {
     font-size: 1.6rem;
     line-height: 150%;
-    font-family: var(--font-2) sans-serif;
+    font-family: var(--font-2);
     font-weight: 400;
 }
+
 
 .bold {
     font-weight: 700;
 }
 
+/* ! Common */
+.flex-row-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-col-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.full-center {
+    align-items: center;
+    justify-content: center;
+}
+
+
+.bullet {
+    list-style-type: square;
+}
+
+.section-heading {
+    color: var(--brown-800);
+    margin-bottom: 5.2rem;
+}
+
+.list-item {
+    padding-left: 2.4rem;
+}
+
+
+/* ! Main container */
+/*  ! Supports screen sizes 320px and up */
+.main-container {
+    min-width: 3.2rem !important;
+    height: fit-content;
+    background-color: white;
+    left: 50%;
+    top: 0;
+    border-radius: 2.4rem;
+    padding: 4rem;
+    max-width: calc(100vw - 50%);
+}
+
+
+/* ! Image */
+.img-container {
+    width: 100%;
+    padding: 4rem;
+    background-image: url("assets/images/image-omelette.jpeg");
+    height: 30rem;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    border-radius: 2rem;
+    margin-bottom: 4rem;
+}
+
+.body-container {
+    gap: 4rem;
+    width: 100%;
+    flex-basis: content;
+}
+
+/* ! About headings */
+
+.about-container h1 {
+    margin-bottom: 2.4rem;
+}
+
+.about-container p {
+    color: var(--stone-600);
+}
+
+/* ! Preparation details */
+
+.prep-container {
+    padding: 2.4rem;
+    background-color: #fae7f0;
+    border-radius: 1.2rem;
+}
+
+.prep-container h3 {
+    color: var(--rose-800);
+}
+
+.prep-container ul {
+    margin-left: 2.4rem;
+}
+
+.prep-container li span {
+    color: var(--stone-600);
+}
 
 .attribution { 
     font-size: 11px;
@@ -71,3 +183,4 @@ body {
 .attribution a { 
     color: hsl(228, 45%, 44%);
 }
+
