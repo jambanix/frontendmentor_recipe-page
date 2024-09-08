@@ -137,6 +137,10 @@ p {
     margin-bottom: 2.4rem;
 }
 
+.list-item span {
+    padding-left: 2.4rem;
+}
+
 /*  ! Responsive */
 
 @media (min-width: 375px) {
@@ -164,9 +168,12 @@ p {
 }
 
 @media (min-width: 768px) {
+
+    body {
+        margin: 12rem 0;
+    }
     .main-container {
         padding: 4rem;
-        margin: 0 4rem;
     }
 
     .img-container {
@@ -189,7 +196,7 @@ p {
 /*  ! Supports screen sizes 375px and up */
 .main-container {
     max-width: min(73.6rem, 100%);
-    height: fit-content;
+    
     background-color: white;
     border-radius: 2.4rem;
 }
@@ -238,15 +245,28 @@ p {
     margin-left: .8rem;
 }
 
-.attribution { 
-    font-size: 11px;
-    text-align: center;
-}
-.attribution a { 
-    color: hsl(228, 45%, 44%);
+.prep-container .standard-list li span:first-child {
+    padding-left: 2.4rem;
 }
 
+
 /*  ! Instructions */
+
+.steps-container {
+    gap: .8rem;
+    justify-content: space-between;
+}
+
+.step-number {
+    color: var(--rose-800);
+    height: 100%;
+    width: 2.4rem;
+}
+
+.step { 
+    height: 100%;
+    width: 90%;
+}
 
 
 /* ! Nutrition info */
@@ -278,3 +298,12 @@ p {
     width: 50%;
 }
 
+.attribution { 
+    margin-top: 3rem;
+    font-size: 1.6rem;
+    text-align: center;
+    font-family: var(--font-2);
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
